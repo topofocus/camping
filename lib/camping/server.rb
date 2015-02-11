@@ -102,7 +102,7 @@ module Camping
 	      
         if !Camping::Models.autoload?(:Base) && options[:database]
           Camping::Models::Base.establish_connection(
-            :adapter => 'sqlite3',
+            :adapter => 'mysql2',
             :database => options[:database]
           )
         end
